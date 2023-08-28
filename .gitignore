@@ -1,0 +1,47 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+frontend/car-parking-assignment/car-parking-assignment/dist
+frontend/car-parking-assignment/tmp
+frontend/car-parking-assignment/out-tsc
+frontend/car-parking-assignment/bazel-out
+
+# Front-End
+frontend/car-parking-assignment/node_modules
+
+# Node
+backend/node_modules
+backend/package-lock.json
+backend/.env
+backend/npm-debug.log
+backend/yarn-error.log
+
+# IDEs and editors
+frontend/car-parking-assignment/.idea/
+frontend/car-parking-assignment/.project
+frontend/car-parking-assignment/.classpath
+frontend/car-parking-assignment/.c9/
+frontend/car-parking-assignment/*.launch
+frontend/car-parking-assignment/.settings/
+frontend/car-parking-assignment/*.sublime-workspace
+
+# Visual Studio Code
+frontend/car-parking-assignment/.vscode/*
+frontend/car-parking-assignment/!.vscode/settings.json
+frontend/car-parking-assignment/!.vscode/tasks.json
+frontend/car-parking-assignment/!.vscode/launch.json
+frontend/car-parking-assignment/!.vscode/extensions.json
+frontend/car-parking-assignment/.history/*
+
+# Miscellaneous
+frontend/car-parking-assignment/.angular/cache
+frontend/car-parking-assignment/.sass-cache/
+frontend/car-parking-assignment/connect.lock
+frontend/car-parking-assignment/coverage
+frontend/car-parking-assignment/libpeerconnection.log
+frontend/car-parking-assignment/testem.log
+frontend/car-parking-assignment/typings
+
+# System files
+frontend/car-parking-assignment/.DS_Store
+frontend/car-parking-assignment/Thumbs.db

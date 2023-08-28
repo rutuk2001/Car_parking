@@ -1,0 +1,48 @@
+.sidebar {
+  box-shadow: 5px 0 5px -5px #333;
+  height: 90vh;
+}
+
+.button {
+  border: none;
+  width: 220px;
+  margin-top: 10px;
+  color: white;
+  height: 35px;
+  background-color: #ff4f5a;
+  font-weight: 900;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 768px) {
+  /* Adjust sidebar and button styles for smaller screens */
+  .sidebar {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust sidebar and button styles for medium-sized screens */
+  .sidebar {
+    height: 80vh;
+  }
+
+  .button {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Adjust sidebar and button styles for large screens */
+  .sidebar {
+    height: 90vh;
+  }
+
+  .button {
+    width: 220px;
+  }
+}

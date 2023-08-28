@@ -1,0 +1,49 @@
+<form [formGroup]="parkingForm" (ngSubmit)="checkAvailability()">
+  <label for="vehicle-type">Vehicle Type:</label>
+  <select name="vehicleType" formControlName="vehicleType">
+    <option value="2W">2 Wheeler</option>
+    <option value="4W">4 Wheeler</option>
+  </select>
+  <br />
+  <br />
+  <br />
+  <label for="time-from">Time From:</label>
+  <input
+    type="datetime-local"
+    name="timeFrom"
+    formControlName="timefrom"
+    [min]="today"
+  />
+  <br />
+  <br />
+  <br />
+  <label for="time-to">Time To:</label>
+  <input
+    type="datetime-local"
+    name="timeTo"
+    formControlName="timeto"
+    [min]="today"
+  />
+  <br />
+  <br />
+  <br />
+  <button type="submit">Check Availability</button>
+</form>
+
+<!-- Availability -->
+
+<div class="div1">
+  <div class="div2" *ngFor="let slots of totalSlots">
+    <div class="div4" *ngIf="!Id.includes(slots._id)" (click)="book(slots._id)">
+      {{ slots.slotName }}
+    </div>
+    <div
+      [class]="slots._id == slot_id ? 'div5' : 'div3'"
+      *ngIf="Id.includes(slots._id)"
+      (click)="book(slots._id)"
+    >
+      {{ slots.slotName }}
+    </div>
+  </div>
+  <button *ngIf="totalSlots" (click)="Payment()">Book</button>
+</div>

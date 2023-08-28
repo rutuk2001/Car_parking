@@ -1,0 +1,37 @@
+<div class="textDiv"><h2>My Bookings</h2></div>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Sr.no</th>
+        <th>Vehical</th>
+        <th>Date</th>
+        <th>TimeFrom</th>
+        <th>TimeTo</th>
+        <th>checkout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let bookings of myBookings.reverse()
+            | paginate : { itemsPerPage: 5, currentPage: p };
+          let i = index
+        "
+      >
+        <td>{{ i + 1 }}</td>
+        <td *ngIf="bookings.vehical_type == '2W'">2-Wheeler</td>
+        <td *ngIf="bookings.vehical_type == '4W'">4-Wheeler</td>
+        <td>{{ bookings.Time_From | date : "shortDate" }}</td>
+        <td>{{ bookings.Time_From | date : "shortTime" }}</td>
+        <td>{{ bookings.Time_to | date : "shortTime" }}</td>
+        <td>
+          <button (click)="payment(bookings._id)">Proceed to checkout</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="page">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
